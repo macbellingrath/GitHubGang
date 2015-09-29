@@ -8,10 +8,10 @@
 
 import Foundation
 
+
 let API_ROOT = "https://api.github.com"
 
-let myProfileURL   = API_ROOT + "/users/macbellingrath"
-
+let myProfileURL   = API_ROOT + "/users/asdfasdfsdf"
 
 
 
@@ -49,3 +49,45 @@ let users: [[String: AnyObject?]] = [
         "updated_at": "2015-09-25T13:30:24Z"]
 ]
 
+class GitHubRequest: NSObject {
+    
+    
+    class func requestUserInfo(username: String,  completion: (responseInfo: AnyObject?) -> ()) {
+        
+        let userURL = API_ROOT + "/users/" + username
+        
+        print(userURL)
+        
+        if let url = NSURL(string: userURL) {
+            
+            let request = NSURLRequest(URL: url)
+            
+           let task =  NSURLSession.sharedSession().dataTaskWithRequest(request) { (data, response, error) in
+            
+            if let data = data {
+                
+                do {
+                    
+                    let info = try NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers)
+                    print(info)
+               
+                } catch  {
+                    print(error)
+                }
+                
+            }
+            
+            print(data)
+                
+            }
+            task.resume()
+        }
+        
+    }
+    
+    class func request(info: [String: AnyObject], completion: (responseInfo: AnyObject?) -> ()) {
+        
+        
+        
+    }
+}

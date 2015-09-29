@@ -16,6 +16,10 @@ class AddFriendViewController: UIViewController {
         
         override func viewDidLoad() {
         super.viewDidLoad()
+            title = "Add"
+            GitHubRequest.requestUserInfo("asdfsdf") { (responseInfo) -> () in
+                print(responseInfo)
+            }
 
         // Do any additional setup after loading the view.
     }

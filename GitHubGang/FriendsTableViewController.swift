@@ -68,7 +68,7 @@ class FriendsTableViewController: UITableViewController {
                     if let data = NSData(contentsOfURL: url) {
                         if let image = UIImage(data: data) {
                            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                            cell.imageVIew.image = image
+                            cell.imageVIew.image = image.circle
                            })
                         }
                     }
@@ -139,6 +139,7 @@ class FriendsTableViewController: UITableViewController {
 //                controller.detailItem = user["name"] as? String
                 
                 controller.navigationItem.leftItemsSupplementBackButton = true
+                print("Row Selected. Preparing for segue")
 
         }
         

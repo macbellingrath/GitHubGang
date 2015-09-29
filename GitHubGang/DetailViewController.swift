@@ -16,6 +16,7 @@
 //        gist count
 //
 import UIKit
+import QuartzCore
 
 class DetailViewController: UIViewController {
     
@@ -60,18 +61,19 @@ class DetailViewController: UIViewController {
                                 if let repoCount = user["public_repos"] as? Int {
                                     if let gists = user["public_gists"] as? Int {
 
-                                        gstLabel.text = "Gists: " + String(gists)
+                                        gstLabel.text =  String(gists)
                                     }
-                                    rpocOunt.text = "Repos: " + String(repoCount)
+                                    rpocOunt.text =  String(repoCount)
                                 }
-                                fllwngLabel.text = "Following: " + String(following)
+                                fllwngLabel.text =  String(following)
                             }
-                            fllwrsLabel.text = "Followers: " + String(followers)
+                            fllwrsLabel.text =  String(followers)
                         }
                         bLabel.text = bio
                     }
                     locLabel.text = location
                 }
+                title = name
                 fNameLabel.text = name
             }
         }
@@ -81,8 +83,13 @@ class DetailViewController: UIViewController {
                         if let data = NSData(contentsOfURL: url) {
                             if let image = UIImage(data: data) {
                                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                                    self.userImageView.contentMode = UIViewContentMode.ScaleAspectFit
-                                    self.userImageView.image = image
+//                                    self.userImageView.contentMode = UIViewContentMode.ScaleAspectFit
+                                    self.userImageView.image = image.circle
+//                                    self.userImageView.layer.cornerRadius  = self.userImageView.frame.size.width / 2
+                                   self.userImageView.layer.masksToBounds = true
+                                    self.userImageView.clipsToBounds = true
+                                    2
+                                    
                                 })
                             }
                         }
@@ -121,3 +128,6 @@ class DetailViewController: UIViewController {
     */
 
 }
+
+
+

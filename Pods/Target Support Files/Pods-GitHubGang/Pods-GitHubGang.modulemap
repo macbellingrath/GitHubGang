@@ -1,0 +1,6 @@
+framework module Pods_GitHubGang {
+  umbrella header "Pods-GitHubGang-umbrella.h"
+
+  export *
+  module * { export * }
+}
