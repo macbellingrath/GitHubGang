@@ -15,6 +15,8 @@
 		E67D09E51BB9BC32008CF2C3 /* Goonies.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67D09E41BB9BC32008CF2C3 /* Goonies.swift */; };
 		E67D09E71BB9C2EB008CF2C3 /* GangTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67D09E61BB9C2EB008CF2C3 /* GangTableViewCell.swift */; };
 		E67D09E91BB9D761008CF2C3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67D09E81BB9D761008CF2C3 /* DetailViewController.swift */; };
+		E67D09EB1BBA2A43008CF2C3 /* AddFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67D09EA1BBA2A43008CF2C3 /* AddFriendViewController.swift */; };
+		E67D09ED1BBAC49E008CF2C3 /* NetworkOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67D09EC1BBAC49E008CF2C3 /* NetworkOperation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,9 @@
 		E67D09E41BB9BC32008CF2C3 /* Goonies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Goonies.swift; path = ../Goonies.swift; sourceTree = "<group>"; };
 		E67D09E61BB9C2EB008CF2C3 /* GangTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GangTableViewCell.swift; sourceTree = "<group>"; };
 		E67D09E81BB9D761008CF2C3 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		E67D09EA1BBA2A43008CF2C3 /* AddFriendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFriendViewController.swift; sourceTree = "<group>"; };
+		E67D09EC1BBAC49E008CF2C3 /* NetworkOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkOperation.swift; sourceTree = "<group>"; };
+		E67D09EE1BBAC68B008CF2C3 /* playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = playground.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +69,11 @@
 				E67D09E01BB9B8B3008CF2C3 /* FriendsTableViewController.swift */,
 				E67D09E61BB9C2EB008CF2C3 /* GangTableViewCell.swift */,
 				E67D09E41BB9BC32008CF2C3 /* Goonies.swift */,
-				E67D09D21BB9B62C008CF2C3 /* Main.storyboard */,
 				E67D09E81BB9D761008CF2C3 /* DetailViewController.swift */,
+				E67D09EE1BBAC68B008CF2C3 /* playground.playground */,
+				E67D09D21BB9B62C008CF2C3 /* Main.storyboard */,
+				E67D09EC1BBAC49E008CF2C3 /* NetworkOperation.swift */,
+				E67D09EA1BBA2A43008CF2C3 /* AddFriendViewController.swift */,
 				E67D09D51BB9B62C008CF2C3 /* Assets.xcassets */,
 				E67D09D71BB9B62C008CF2C3 /* LaunchScreen.storyboard */,
 				E67D09DA1BB9B62C008CF2C3 /* Info.plist */,
@@ -143,11 +151,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E67D09EB1BBA2A43008CF2C3 /* AddFriendViewController.swift in Sources */,
 				E67D09E51BB9BC32008CF2C3 /* Goonies.swift in Sources */,
 				E67D09CF1BB9B62C008CF2C3 /* AppDelegate.swift in Sources */,
 				E67D09E91BB9D761008CF2C3 /* DetailViewController.swift in Sources */,
 				E67D09E71BB9C2EB008CF2C3 /* GangTableViewCell.swift in Sources */,
 				E67D09E11BB9B8B3008CF2C3 /* FriendsTableViewController.swift in Sources */,
+				E67D09ED1BBAC49E008CF2C3 /* NetworkOperation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

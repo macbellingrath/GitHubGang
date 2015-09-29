@@ -15,6 +15,8 @@ class FriendsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        
+//        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "addPressed")
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -24,7 +26,10 @@ class FriendsTableViewController: UITableViewController {
         
         
     }
-
+    
+    func addPressed() {
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -127,8 +132,9 @@ class FriendsTableViewController: UITableViewController {
         
         if segue.identifier == "showDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow {
-                let user = users[indexPath.row]
                 let controller = segue.destinationViewController as! DetailViewController
+                controller.indexPath = indexPath
+                
                 
 //                controller.detailItem = user["name"] as? String
                 
@@ -143,3 +149,4 @@ class FriendsTableViewController: UITableViewController {
 }
 
 
+}

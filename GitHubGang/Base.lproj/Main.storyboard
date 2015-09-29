@@ -62,11 +62,73 @@
                             <outlet property="delegate" destination="s68-1M-aVn" id="dum-gw-aZ4"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="GitHubGang" id="evz-oV-bif"/>
+                    <navigationItem key="navigationItem" title="GitHubGang" id="evz-oV-bif">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="fbP-9e-AP0">
+                            <connections>
+                                <segue destination="1lW-Pb-2HC" kind="show" identifier="addMember" id="DvR-l6-8zE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f1y-cZ-AE4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1059" y="572"/>
+        </scene>
+        <!--Add Friend View Controller-->
+        <scene sceneID="24m-Ew-o8O">
+            <objects>
+                <viewController id="1lW-Pb-2HC" customClass="AddFriendViewController" customModule="GitHubGang" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cN0-XA-k0z"/>
+                        <viewControllerLayoutGuide type="bottom" id="eVW-TV-HZC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xHt-f5-q9i">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="enter a username..." borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Ix7-8I-cMM">
+                                <rect key="frame" x="138" y="290" width="325" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="325" id="nKI-ET-v4t"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add GitGang Member" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfG-N2-o2l">
+                                <rect key="frame" x="217" y="201" width="166" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="0rc-uG-JN1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tAl-v0-Afc">
+                                <rect key="frame" x="283" y="377" width="34" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="savebuttonPressed:" destination="1lW-Pb-2HC" eventType="touchUpInside" id="PnL-jJ-hQu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tAl-v0-Afc" firstAttribute="centerX" secondItem="Ix7-8I-cMM" secondAttribute="centerX" id="5px-IB-cBe"/>
+                            <constraint firstItem="Ix7-8I-cMM" firstAttribute="centerX" secondItem="vfG-N2-o2l" secondAttribute="centerX" id="7nx-N3-z0g"/>
+                            <constraint firstItem="Ix7-8I-cMM" firstAttribute="top" secondItem="vfG-N2-o2l" secondAttribute="bottom" constant="68" id="PjP-ZJ-5OC"/>
+                            <constraint firstItem="vfG-N2-o2l" firstAttribute="centerX" secondItem="xHt-f5-q9i" secondAttribute="centerX" id="RrV-29-nLX"/>
+                            <constraint firstItem="vfG-N2-o2l" firstAttribute="top" secondItem="cN0-XA-k0z" secondAttribute="bottom" constant="137" id="l5r-1y-KAo"/>
+                            <constraint firstItem="tAl-v0-Afc" firstAttribute="top" secondItem="Ix7-8I-cMM" secondAttribute="bottom" constant="57" id="tMj-qt-fsS"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SsM-yh-syE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1946" y="1077"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="xuP-Me-6Qd">

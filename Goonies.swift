@@ -40,7 +40,7 @@ let users: [[String: AnyObject?]] = [
         "location": "Nashville, TN",
         "email": nil,
         "hireable": true,
-        "bio": nil,
+        "bio": "I love Swift.",
         "public_repos": 45,
         "public_gists": 0,
         "followers": 2,
